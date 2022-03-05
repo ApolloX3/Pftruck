@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class Printer {
 
-    public static void printOptions(ArrayList<String> list) {
+    Printer printer;
+
+    public void printOptions(ArrayList<String> list) {
         for (int i = 0; i < list.size(); ++i) {
             int counter = i + 1;
             System.out.println(
@@ -13,16 +15,15 @@ public class Printer {
             );
         }
     }
-
-    public static void printMainMenu() {
-        String menu = String.format("\tPlease choose from the options below: \n" +
+    public void printMainMenu() {
+        String menu = String.format(
+                "\tPlease choose from the options below: \n" +
                 "1. Chassis  2. Accessories\n" +
                 "3. Power    4. Transmission\n" +
                 "5. Seat     6. Style");
         System.out.println(menu);
     }
-
-    public static void buildChassis() {
+    public void buildChassis() {
         // choose wheel base
         Scanner scan = new Scanner(System.in);
         Chassis chassis = new Chassis();
@@ -39,8 +40,7 @@ public class Printer {
         System.out.println(chassis.getWheelBaseChoice());
         System.out.println(chassis.getBrakeChoice());
     }
-
-    public static ArrayList<String> buildAcc() {
+    public ArrayList<String> buildAcc() {
         //choose accessories
         Accessories accessories = new Accessories();
 
@@ -71,8 +71,7 @@ public class Printer {
         }
         return accChoices;
     }
-
-    public static void buildPower() {
+    public void buildPower() {
         Scanner scan = new Scanner(System.in);
         Power power = new Power();
 
@@ -94,6 +93,28 @@ public class Printer {
         System.out.println("You Chose:");
         System.out.println(seat.getSeatChoice());
     }
+    public void buildTransmission() {
+        Scanner scan = new Scanner(System.in);
+        Transmission tran = new Transmission();
 
+        printer.printOptions(tran.getTranList());
+        int tranChoice = scan.nextInt();
+
+        tran.setTranChoice(tranChoice);
+        System.out.println("You Chose:");
+        System.out.println(tran.getTranChoice());
+    }
+    public void buildStyle() {
+        Scanner scan = new Scanner(System.in);
+        Style style = new Style();
+
+        printer.printOptions(style.getStyleList());
+        int styleChoice = scan.nextInt();
+
+        style.setYourStyle(styleChoice);
+
+        System.out.println("You Chose:");
+        System.out.println(style.getYourStyleChoice());
+    }
 }
 

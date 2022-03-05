@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Menu {
 
     Truck truck;
-    com.company.printer printer = new printer();
+    Printer printer = new Printer();
 
     public void printMenu(Truck truck) {
         this.truck = truck;
         //print main menu
-        com.company.printer.printMainMenu();
+        printer.printMainMenu();
         // Scan for menu choice
         Scanner scan = new Scanner(System.in);
         int menuChoice = scan.nextInt();
@@ -25,8 +25,8 @@ public class Menu {
                 } else if (menuChoice == 2) {
                     //Accessories accessories = new Accessories();
                     printer.buildAcc();
-                    truck.setYourAccessories(com.company.printer.buildAcc());
-                    com.company.printer.printMainMenu();
+                    truck.setYourAccessories(printer.buildAcc());
+                    printer.printMainMenu();
                     /// fix index out of bounds exception
                 } else if (menuChoice == 3) {
                     Power power = new Power();
@@ -37,11 +37,19 @@ public class Menu {
                     Seat seat = new Seat();
                     printer.buildSeat();
                     truck.setSeat(seat);
-                    com.company.printer.printMainMenu();
+                    printer.printMainMenu();
                 } else if (menuChoice == 5) {
                     Transmission tran = new Transmission();
-                    printer.
-
+                    printer.buildTransmission();
+                    truck.setTran(tran);
+                    printer.printMainMenu();
+                } else if ( menuChoice == 6) {
+                    Style style = new Style();
+                    printer.buildStyle();
+                    truck.setStyle(style);
+                    printer.printMainMenu();
+                } else {
+                    System.out.println("Enter a valid choice 1 - 6");
                 }
             }
         }

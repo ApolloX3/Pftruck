@@ -5,38 +5,26 @@ import java.util.Scanner;
 
 public class Style {
 
-    private String yourStyle;
+    private String yourStyleChoice;
+    private ArrayList<String> styleList;
 
-
-    public void getStyle() {
-
-
-        System.out.println("Welcome to our Seats");
-
-        System.out.println(" \t Choose from 6 chassis types: \n " +
-                " 1. Long Flat Nose" + "\t 2.Slant Nose\n");
-
-        System.out.println("Enter your choice of chassis here: ");
-
-        Scanner scan = new Scanner(System.in);
-        int styleChoice = scan.nextInt();
-
-        ArrayList<String> style = new ArrayList<String>();
-
-        style.add(" Long Flat Nose ");
-        style.add("Slant Nose");
-
-
-        String yourStyle = style.get(styleChoice - 1);
-
-        System.out.println(yourStyle);
+    Style() {
+        styleList = buildStyleList();
     }
+    public ArrayList<String> buildStyleList() {
+        ArrayList<String> styleList = new ArrayList<String>();
+        styleList.add(" Long Flat Nose ");
+        styleList.add("Slant Nose");
 
-    public String getYourStyle() {
-        return yourStyle;
+        return styleList;
     }
-
-    public void setYourStyle(String yourStyle) {
-        this.yourStyle = yourStyle;
+    public String getYourStyleChoice() {
+        return yourStyleChoice;
+    }
+    public void setYourStyle(int styleChoice) {
+        this.yourStyleChoice = styleList.get(styleChoice - 1);
+    }
+    public ArrayList<String> getStyleList() {
+        return styleList;
     }
 }

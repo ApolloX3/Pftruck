@@ -3,24 +3,27 @@ import java.util.ArrayList;
 
 public class Transmission {
     private String tranChoice;
-    private ArrayList<String> gearList;
+    private ArrayList<String> tranList;
     
     Transmission() {
-        this.gearList = buildGearList();
+        this.tranList = buildGearList();
     }
     private ArrayList<String> buildGearList() {
-        ArrayList<String> gearList = new ArrayList<String>();
-        gearList.add("19");
-        gearList.add("18");
-        gearList.add("17");
-        gearList.add("16");
+        ArrayList<String> tranList = new ArrayList<String>();
+        tranList.add("19");
+        tranList.add("18");
+        tranList.add("17");
+        tranList.add("16");
 
-        return gearList;
+        return tranList;
     }
     public String getTranChoice() {
         return tranChoice;
     }
     public void setTranChoice(int tranChoice) {
-        this.tranChoice = gearList.get(tranChoice - 1);
+        this.tranChoice = tranList.get(tranChoice - 1);
+    }
+    public ArrayList<String> getTranList() {
+        return tranList;
     }
 }

@@ -7,14 +7,14 @@ public class Truck {
     private ArrayList<String> accChoices;
     private Power engine;
     private Seat seat;
+    private Transmission tran;
+    private Style style;
 
     public Truck() {
     }
-
-    public Chassis setYourChassis(Chassis chassis) {
-        return this.chassis = chassis;
+    public void setYourChassis(Chassis chassis) {
+        this.chassis = chassis;
     }
-
     public String printAttributes() {
         String text = String.format(
                 "Truck Specifications\n" +
@@ -24,16 +24,19 @@ public class Truck {
                 , chassis.getWheelBaseChoice());
         return text;
     }
-
-    public ArrayList<String> setYourAccessories(ArrayList<String> accChoices ) {
-        return this.accChoices = accChoices;
+    public void setYourAccessories(ArrayList<String> accChoices ) {
+         this.accChoices = accChoices;
     }
-
     public Power setYourEngine (Power power) {
         return this.engine = power;
     }
-
     public void setSeat(Seat seat) {
         this.seat = seat;
+    }
+    public void setTran(Transmission tran) {
+        this.tran = tran;
+    }
+    public void setStyle(Style style) {
+        this.style = style;
     }
 }
