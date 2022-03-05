@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Chassis {
 
-
     private String brakeChoice;
     private String wheelBaseChoice;
     private ArrayList<String> wheelBaseList;
