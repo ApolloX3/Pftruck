@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Menu {
 
     Truck truck;
+    com.company.printer printer = new printer();
 
     public void printMenu(Truck truck) {
         this.truck = truck;
         //print main menu
-        Printer.printMainMenu();
+        com.company.printer.printMainMenu();
         // Scan for menu choice
         Scanner scan = new Scanner(System.in);
         int menuChoice = scan.nextInt();
@@ -18,15 +19,30 @@ public class Menu {
             if (menuChoice > 0 & menuChoice < 7) {
                 if (menuChoice == 1) {
                     Chassis chassis = new Chassis();
-                    Printer.buildChassis();
+                    printer.buildChassis();
                     truck.setYourChassis(chassis);
-                    Printer.printMainMenu();
+                    printer.printMainMenu();
                 } else if (menuChoice == 2) {
-                    Accessories accessories = new Accessories();
-                    Printer.buildAcc();
-                    truck.setYourAccessories(Printer.buildAcc());
-                    Printer.printMainMenu();
-                }  ///// continue work here
+                    //Accessories accessories = new Accessories();
+                    printer.buildAcc();
+                    truck.setYourAccessories(com.company.printer.buildAcc());
+                    com.company.printer.printMainMenu();
+                    /// fix index out of bounds exception
+                } else if (menuChoice == 3) {
+                    Power power = new Power();
+                    printer.buildPower();
+                    truck.setYourEngine(power);
+                    printer.printMainMenu();
+                } else if (menuChoice == 4) {
+                    Seat seat = new Seat();
+                    printer.buildSeat();
+                    truck.setSeat(seat);
+                    com.company.printer.printMainMenu();
+                } else if (menuChoice == 5) {
+                    Transmission tran = new Transmission();
+                    printer.
+
+                }
             }
         }
     }

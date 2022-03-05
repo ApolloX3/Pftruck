@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Truck {
     private Chassis chassis;
     private ArrayList<String> accChoices;
+    private Power engine;
+    private Seat seat;
 
     public Truck() {
     }
@@ -25,5 +27,13 @@ public class Truck {
 
     public ArrayList<String> setYourAccessories(ArrayList<String> accChoices ) {
         return this.accChoices = accChoices;
+    }
+
+    public Power setYourEngine (Power power) {
+        return this.engine = power;
+    }
+
+    public void setSeat(Seat seat) {
+        this.seat = seat;
     }
 }

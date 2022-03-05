@@ -25,13 +25,11 @@ public class Printer {
     public static void buildChassis() {
         // choose wheel base
         Scanner scan = new Scanner(System.in);
-
         Chassis chassis = new Chassis();
 
-        Printer.printOptions(chassis.getWheelBaseList());
+        printer.printOptions(chassis.getWheelBaseList());
         int wheelBaseNum = scan.nextInt();
-
-        Printer.printOptions(chassis.getBrakeList());
+        printer.printOptions(chassis.getBrakeList());
         int brakeChoice = scan.nextInt();
 
         chassis.setWheelBaseChoice(wheelBaseNum);
@@ -46,7 +44,7 @@ public class Printer {
         //choose accessories
         Accessories accessories = new Accessories();
 
-        Printer.printOptions(accessories.getAccessories());
+        printer.printOptions(accessories.getAccessories());
 
         ArrayList<String> accList = accessories.getAccessories();
         ArrayList<String> accChoices = new ArrayList<String>();
@@ -73,5 +71,29 @@ public class Printer {
         }
         return accChoices;
     }
+
+    public static void buildPower() {
+        Scanner scan = new Scanner(System.in);
+        Power power = new Power();
+
+        printer.printOptions(power.getEngine());
+        int engineChoice = scan.nextInt();
+
+        power.setEngineChoice(engineChoice);
+        System.out.println("You chose:");
+        System.out.println(power.getEngineChoice());
+    }
+    public void buildSeat() {
+        Scanner scan = new Scanner(System.in);
+        Seat seat = new Seat();
+
+        printer.printOptions(seat.getSeatList());
+        int seatChoice = scan.nextInt();
+
+        seat.setSeatChoice(seatChoice);
+        System.out.println("You Chose:");
+        System.out.println(seat.getSeatChoice());
+    }
+
 }
 

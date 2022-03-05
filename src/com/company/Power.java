@@ -5,26 +5,15 @@ import java.util.Scanner;
 
 public class Power {
 
-    private int powerChoice;
-    private String yourEngine;
+    private String engineChoice;
+    private ArrayList<String> engine;
 
-    public void getEngine(int val) {
-        this.powerChoice = val;
+    Power() {
+        this.engine = buildEngineList();
+    }
 
-//        System.out.println("Welcome to our Engines");
-//
-//        System.out.println(" \t Choose from 6 engine types: \n " +
-//                " 1. 300 HP Mack  " + "\t 2. 350 Cummins \n " +
-//                " 3. DD 15 " + " 4.\t 1693 Cat  \n" +
-//                " 5. 60 Series Detroit " + "\t 6. C15 Cat \n ");
-//
-//        System.out.println(" Enter your choice of engine here: ");
-
-        Scanner scan = new Scanner(System.in);
-        int powerChoice = scan.nextInt();
-
-        ArrayList<String> engine = new ArrayList<String>();
-
+    private ArrayList<String> buildEngineList() {
+        ArrayList<String> engine = new ArrayList<>();
         engine.add(" 300 HP Mack ");
         engine.add("350 Cummins");
         engine.add("DD 15");
@@ -32,13 +21,18 @@ public class Power {
         engine.add("60 Series Detroit");
         engine.add("C15 Cat");
 
-        yourEngine = engine.get(powerChoice - 1);
-
-        System.out.println(yourEngine);
-
+        return engine;
     }
 
-    public String getYourEngine() {
-        return yourEngine;
+    public ArrayList<String> getEngine() {
+        return engine;
+    }
+
+    public void setEngineChoice(int engineChoice) {
+        this.engineChoice = engine.get(engineChoice - 1);
+    }
+
+    public String getEngineChoice() {
+        return engineChoice;
     }
 }
