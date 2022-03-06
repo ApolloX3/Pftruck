@@ -6,11 +6,8 @@ public class Main {
         Title title = new Title("Truck Buying Software", "Let's Build Your Truck!");
         title.printTitle();
 
-        Menu menu = new Menu();
-        menu.displayMenu();
+        Repeat callMenu = new Repeat();
+        callMenu.repeatItem();
 
-        Truck truck = new Truck();
-        truck.printAttributes();
-        // move to choices class?
     }
 }

@@ -1,20 +1,35 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Assembler {
 
     Truck truck;
     Run runBuild = new Run();
-    Chassis chassis = new Chassis();
-    Printer printer = new Printer();
 
-    Assembler(Truck truck){
+    Assembler(Truck truck) {
         this.truck = truck;
     }
 
     public void assembleChassis() {
-        printer.printMainMenu();
         runBuild.runChassis();
+    }
+
+    public void assembleTran() {
+        runBuild.runTran();
+    }
+
+    public void assemblePower() {
+        runBuild.runPower();
+    }
+
+    public void assembleStyle() {
+        runBuild.runStyle();
+    }
+
+    public void assembleSeat() {
+        runBuild.runSeat();
+    }
+
+    public void assembleAcc() {
+        runBuild.runAcc();
     }
 }

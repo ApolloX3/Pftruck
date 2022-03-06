@@ -18,29 +18,25 @@ public class Truck {
                 "Truck Specifications\n" +
                         "____________________\n" +
                         "Chassis: \n" +
-                        "Wheelbase: %s" +
-                        "Brakes: %s" +
+                        "Wheelbase: %s\n",chassis.getWheelBaseChoice() +
+                        "Brakes: %s\n",chassis.getBrakeChoice() +
                         "_____________________\n" +
                         "Accessories: \n" +
-                        "%s \n" +
+                        "%s\n",accessories +
                         "______________________\n" +
                         "Power Train:\n" +
-                        "Engine: %s\n" +
+                        "Engine: %s\n",engine.getEngine() +
                         "_______________________\n" +
                         "Seat:\n" +
-                        "Seat Type: %s\n" +
+                        "Seat Type: %s\n",seat.getSeatChoice() +
                         "_______________________\n" +
                         "Transmission:\n" +
-                        "Transmission Type:%s\n" +
+                        "Transmission Type:%s\n",tran.getTranChoice() +
                         "_______________________\n" +
                         "Style:\n" +
-                        "Truck Style: %s\n" +
+                        "Truck Style: %s\n",style.getYourStyleChoice() +
                         "________________________\n" +
-                        " Thank you for your Purchase!"
-
-                , chassis.getWheelBaseChoice(), chassis.getBrakeChoice(),accessories
-                , engine.getEngine(), seat.getSeatChoice(),
-                tran.getTranChoice(), style.getYourStyleChoice());
+                        " Thank you for your Purchase!");
         return text;
     }
     public void setYourChassis(Chassis chassis) {
