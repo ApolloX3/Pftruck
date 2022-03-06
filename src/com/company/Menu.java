@@ -21,15 +21,15 @@ public class Menu {
             menuPrompt();
         }
         if (choice == 2) {
-            ArrayList<String> accessories = builder.buildAcc();
+            ArrayList<String> accessories = builder.buildAccessories();
             truck.setAccessories(accessories);
             menuPrompt();
         }
-//        if (choice == 3) {
-//            Power power = new Power();
-//            truck.getPower();
-//            menuPrompt();
-//        }
+        if (choice == 3) {
+            PowerTrain powertrain = new PowerTrain();
+            truck.setPowerTrain(powertrain);
+            menuPrompt();
+        }
 //        if (choice == 4) {
 //            assembler.assembleSeat();
 //        }

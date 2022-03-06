@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class Truck {
     private Chassis chassis;
     private ArrayList<String> accessories;
-    private Power power;
+    private PowerTrain powertrain;
 
     public void printAttributes() {
-
         String text = String.format(
                 "Truck Specifications\n" +
                         "____________________\n" +
                         "Chassis: \n" +
-                        "Wheelbase: %s\n", getChassis().getWheelBaseChoice()
+                        "Wheelbase: %s\n", getChassis().getWheelBaseChoice() +
+                        "Power train: %s\n", getPowerTrain()
         );
 
         System.out.println(text);
@@ -35,11 +35,11 @@ public class Truck {
         this.accessories = accessories;
     }
 
-    public Power getPower() {
-        return power;
+    public PowerTrain getPowerTrain() {
+        return powertrain;
     }
 
-    public void setPower(Power power) {
-        this.power = power;
+    public void setPowerTrain(PowerTrain powertrain) {
+        this.powertrain = powertrain;
     }
 }

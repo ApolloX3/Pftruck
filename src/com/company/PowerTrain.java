@@ -1,14 +1,13 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Power {
+public class PowerTrain {
 
     private String engineChoice;
     private ArrayList<String> engine;
 
-    Power() {
+    PowerTrain() {
         this.engine = buildEngineList();
     }
 

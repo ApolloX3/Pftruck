@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Builder {
+    Scanner scan = new Scanner(System.in);
 
     Printer printer = new Printer();
 
     public Chassis buildChassis() {
-        // choose wheel base
-        Scanner scan = new Scanner(System.in);
         Chassis chassis = new Chassis();
 
         printer.printOptions(chassis.getWheelBaseList());
@@ -28,25 +27,31 @@ public class Builder {
         return chassis;
     }
 
-    public ArrayList<String> buildAcc() {
-        //choose accessories
+    public ArrayList<String> buildAccessories() {
         Accessories accessories = new Accessories();
         printer.printOptions(accessories.getAccessories());
 
         ArrayList<String> accList = accessories.getAccessories();
-        ArrayList<String> accChoices = new ArrayList<String>();
+        ArrayList<String> accChoices = new ArrayList<>();
 
         String answerString = "y";
+
         while (answerString.equalsIgnoreCase("y")) {
-            System.out.println("Enter an Accessorie:");
-            Scanner scan = new Scanner(System.in);
-            int accNum = scan.nextInt();
-            accChoices.add(accList.get(accNum - 1));
-            System.out.println("You Chose: " + accChoices.get(accNum - 1));
-            System.out.println("would you like another Accessorie? y/n");
+            System.out.println("Enter an Accessory:");
+
+            int accessoryNum = scan.nextInt();
+            String selection = accList.get(accessoryNum - 1);
+
+            accChoices.add(selection);
+
+            System.out.println("You Chose: " + selection);
+            System.out.println("would you like another Accessory? y/n");
+
             answerString = scan.next();
         }
+
         System.out.println("You chose:");
+
         for (int i = 0; i < accChoices.size(); ++i) {
             System.out.println(accChoices.get(i));
         }
@@ -55,14 +60,14 @@ public class Builder {
 
     public void buildPower() {
         Scanner scan = new Scanner(System.in);
-        Power power = new Power();
+        PowerTrain powertrain = new PowerTrain();
 
-        printer.printOptions(power.getEngine());
+        printer.printOptions(powertrain.getEngine());
         int engineChoice = scan.nextInt();
 
-        power.setEngineChoice(engineChoice);
+        powertrain.setEngineChoice(engineChoice);
         System.out.println("You chose:");
-        System.out.println(power.getEngineChoice());
+        System.out.println(powertrain.getEngineChoice());
     }
 
     public void buildSeat() {
