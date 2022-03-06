@@ -58,7 +58,7 @@ public class Builder {
         return accChoices;
     }
 
-    public void buildPower() {
+    public PowerTrain buildPowerTrain() {
         Scanner scan = new Scanner(System.in);
         PowerTrain powertrain = new PowerTrain();
 
@@ -66,8 +66,11 @@ public class Builder {
         int engineChoice = scan.nextInt();
 
         powertrain.setEngineChoice(engineChoice);
+
         System.out.println("You chose:");
         System.out.println(powertrain.getEngineChoice());
+
+        return powertrain;
     }
 
     public void buildSeat() {

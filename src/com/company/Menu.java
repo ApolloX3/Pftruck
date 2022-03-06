@@ -26,7 +26,7 @@ public class Menu {
             menuPrompt();
         }
         if (choice == 3) {
-            PowerTrain powertrain = new PowerTrain();
+            PowerTrain powertrain = builder.buildPowerTrain();
             truck.setPowerTrain(powertrain);
             menuPrompt();
         }
