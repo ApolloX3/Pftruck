@@ -23,6 +23,5 @@ public class Printer {
                         "\t---When finished press 7.---");
         System.out.println(menu);
     }
-
 }
 

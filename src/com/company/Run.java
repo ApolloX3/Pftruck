@@ -5,10 +5,12 @@ public class Run {
     Truck truck = new Truck();
     Builder builder = new Builder();
 
-    public void runChassis() {
+    public Chassis runChassis() {
         Chassis chassis = new Chassis();
         builder.buildChassis();
         truck.setYourChassis(chassis);
+
+        return chassis;
     }
     public void runAcc() {
         builder.buildAcc();

@@ -7,10 +7,10 @@ public class Main {
         title.printTitle();
 
         Menu menu = new Menu();
+        menu.displayMenu();
+
         Truck truck = new Truck();
-
-        menu.printMenu(truck);
-
-        System.out.println(truck.printAttributes());
+        truck.printAttributes();
+        // move to choices class?
     }
 }

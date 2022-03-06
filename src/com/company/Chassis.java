@@ -18,7 +18,8 @@ public class Chassis {
         return wheelBaseChoice;
     }
 
-    public void setWheelBaseChoice(int wheelNum) {
+    public void setWheelBaseChoice(int wheelNum)
+    {
         wheelBaseChoice = wheelBaseList.get(wheelNum - 1);
     }
 
