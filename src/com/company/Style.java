@@ -13,7 +13,7 @@ public class Style {
     }
     public ArrayList<String> buildStyleList() {
         ArrayList<String> styleList = new ArrayList<String>();
-        styleList.add(" Long Flat Nose ");
+        styleList.add("Long Flat Nose ");
         styleList.add("Slant Nose");
 
         return styleList;

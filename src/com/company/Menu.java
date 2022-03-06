@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Menu {
 
-    Truck truck;
+    Truck truck = new Truck();
     Printer printer = new Printer();
+    Run runBuild = new Run();
 
     public void printMenu(Truck truck) {
         this.truck = truck;
@@ -18,38 +19,29 @@ public class Menu {
         if (menuChoice != 0) {
             if (menuChoice > 0 & menuChoice < 7) {
                 if (menuChoice == 1) {
-                    Chassis chassis = new Chassis();
-                    printer.buildChassis();
-                    truck.setYourChassis(chassis);
-                    printer.printMainMenu();
+                    runBuild.runChassis();
+                    
                 } else if (menuChoice == 2) {
-                    //Accessories accessories = new Accessories();
-                    printer.buildAcc();
-                    truck.setYourAccessories(printer.buildAcc());
-                    printer.printMainMenu();
-                    /// fix index out of bounds exception
+                    runBuild.runAcc();
+
                 } else if (menuChoice == 3) {
-                    Power power = new Power();
-                    printer.buildPower();
-                    truck.setYourEngine(power);
-                    printer.printMainMenu();
+                    runBuild.runPower();
+
                 } else if (menuChoice == 4) {
-                    Seat seat = new Seat();
-                    printer.buildSeat();
-                    truck.setSeat(seat);
-                    printer.printMainMenu();
+                    runBuild.runSeat();
+
                 } else if (menuChoice == 5) {
-                    Transmission tran = new Transmission();
-                    printer.buildTransmission();
-                    truck.setTran(tran);
-                    printer.printMainMenu();
+                    runBuild.runTran();
+
                 } else if ( menuChoice == 6) {
-                    Style style = new Style();
-                    printer.buildStyle();
-                    truck.setStyle(style);
-                    printer.printMainMenu();
-                } else {
+                    runBuild.runStyle();
+
+                } else if (menuChoice == 7) {
+                    truck.printAttributes();
+                }
+                else {
                     System.out.println("Enter a valid choice 1 - 6");
+                    printMenu(truck);
                 }
             }
         }

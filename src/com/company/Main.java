@@ -8,8 +8,9 @@ public class Main {
 
         Menu menu = new Menu();
         Truck truck = new Truck();
+
         menu.printMenu(truck);
 
-        //System.out.println(truck.printAttributes());
+        System.out.println(truck.printAttributes());
     }
 }

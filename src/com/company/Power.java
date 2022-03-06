@@ -14,12 +14,12 @@ public class Power {
 
     private ArrayList<String> buildEngineList() {
         ArrayList<String> engine = new ArrayList<>();
-        engine.add(" 300 HP Mack ");
-        engine.add("350 Cummins");
-        engine.add("DD 15");
-        engine.add("1693 Cat");
-        engine.add("60 Series Detroit");
-        engine.add("C15 Cat");
+        engine.add("300 HP Mack Engine");
+        engine.add("350 Cummins Engine");
+        engine.add("DD 15 Engine");
+        engine.add("1693 Cat Engine");
+        engine.add("60 Series Detroit Engine");
+        engine.add("C15 Cat Engine");
 
         return engine;
     }

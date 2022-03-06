@@ -13,10 +13,10 @@ public class Seat {
 
     private ArrayList buildSeatList() {
         ArrayList<String> seatList = new ArrayList<String>();
-        seatList.add(" Smitty-built ");
-        seatList.add("Bostrom");
-        seatList.add(" Black Talon ");
-        seatList.add("Air Ride");
+        seatList.add("Smitty-built Seat");
+        seatList.add("Bostrom Seat");
+        seatList.add(" Black Talon Seat");
+        seatList.add("Air Ride Seat");
 
         return seatList;
     }

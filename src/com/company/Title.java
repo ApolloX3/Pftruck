@@ -12,7 +12,5 @@ public class Title {
 
     public void printTitle() {
         System.out.println(strTitle + "\n" + "\t" + strTagline);
-
-
     }
 }
