@@ -9,27 +9,27 @@ public class Assembler {
         this.truck = truck;
     }
 
-    public void assembleChassis() {
-        runBuild.runChassis();
-    }
+//    public void assembleChassis() {
+//        runBuild.runChassis(truck);
+//    }
 
-    public void assembleTran() {
-        runBuild.runTran();
-    }
-
-    public void assemblePower() {
-        runBuild.runPower();
-    }
-
-    public void assembleStyle() {
-        runBuild.runStyle();
-    }
-
-    public void assembleSeat() {
-        runBuild.runSeat();
-    }
-
-    public void assembleAcc() {
-        runBuild.runAcc();
-    }
+//    public void assembleTran() {
+//        runBuild.runTran();
+//    }
+//
+//    public void assemblePower() {
+//        runBuild.runPower();
+//    }
+//
+//    public void assembleStyle() {
+//        runBuild.runStyle();
+//    }
+//
+//    public void assembleSeat() {
+//        runBuild.runSeat();
+//    }
+//
+//    public void assembleAcc() {
+//        runBuild.runAcc();
+//    }
 }

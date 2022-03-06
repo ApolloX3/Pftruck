@@ -1,21 +1,52 @@
 package com.company;
 
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
+    private Truck truck;
 
-    Choices choices = new Choices();
-    Printer printer = new Printer();
+    Builder builder = new Builder();
     Scanner scan = new Scanner(System.in);
-    public int choice;
+    Printer printer = new Printer();
 
-    public void displayMenu() {
+    Menu(Truck truck) {
+        this.truck = truck;
+    }
+
+    public void chooseOption(int choice) {
+        if (choice == 1) {
+            Chassis chassis = builder.buildChassis();
+            truck.setChassis(chassis);
+            menuPrompt();
+        }
+        if (choice == 2) {
+            ArrayList<String> accessories = builder.buildAcc();
+            truck.setAccessories(accessories);
+            menuPrompt();
+        }
+//        if (choice == 3) {
+//            Power power = new Power();
+//            truck.getPower();
+//            menuPrompt();
+//        }
+//        if (choice == 4) {
+//            assembler.assembleSeat();
+//        }
+//        if (choice == 5) {
+//            assembler.assembleTran();
+//        }
+//        if (choice == 6) {
+//            assembler.assembleStyle();
+//        }
+        if (choice == 7) {
+            truck.printAttributes();
+        }
+    }
+
+    private void menuPrompt() {
         printer.printMainMenu();
-        choice = scan.nextInt();
-        choices.setAssembler(choice);
+
+        chooseOption(scan.nextInt());
     }
 }
-
-
-

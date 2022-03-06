@@ -3,63 +3,43 @@ package com.company;
 import java.util.ArrayList;
 
 public class Truck {
-    private Chassis chassis = new Chassis();
-    private ArrayList<String> accessories = new ArrayList<String>();
-    private Power engine = new Power();
-    private Seat seat = new Seat();
-    private Transmission tran = new Transmission();
-    private Style style = new Style();
+    private Chassis chassis;
+    private ArrayList<String> accessories;
+    private Power power;
 
-    public Truck() {
-    }
+    public void printAttributes() {
 
-    public String printAttributes() {
         String text = String.format(
                 "Truck Specifications\n" +
                         "____________________\n" +
                         "Chassis: \n" +
-                        "Wheelbase: %s\n",chassis.getWheelBaseChoice() +
-                        "Brakes: %s\n",chassis.getBrakeChoice() +
-                        "_____________________\n" +
-                        "Accessories: \n" +
-                        "%s\n",accessories +
-                        "______________________\n" +
-                        "Power Train:\n" +
-                        "Engine: %s\n",engine.getEngine() +
-                        "_______________________\n" +
-                        "Seat:\n" +
-                        "Seat Type: %s\n",seat.getSeatChoice() +
-                        "_______________________\n" +
-                        "Transmission:\n" +
-                        "Transmission Type:%s\n",tran.getTranChoice() +
-                        "_______________________\n" +
-                        "Style:\n" +
-                        "Truck Style: %s\n",style.getYourStyleChoice() +
-                        "________________________\n" +
-                        " Thank you for your Purchase!");
-        return text;
-    }
-    public void setYourChassis(Chassis chassis) {
-        this.chassis = chassis;
+                        "Wheelbase: %s\n", getChassis().getWheelBaseChoice()
+        );
+
+        System.out.println(text);
     }
 
-    public Power setYourEngine(Power power) {
-        return this.engine = power;
+    public void setChassis(Chassis chassis1) {
+        this.chassis = chassis1;
     }
 
-    public void setSeat(Seat seat) {
-        this.seat = seat;
+    public Chassis getChassis() {
+        return this.chassis;
     }
 
-    public void setTran(Transmission tran) {
-        this.tran = tran;
+    public ArrayList<String> getAccessories() {
+        return accessories;
     }
 
-    public void setStyle(Style style) {
-        this.style = style;
+    public void setAccessories(ArrayList<String> accessories) {
+        this.accessories = accessories;
     }
 
-    public void setYourAccessories(ArrayList<String> buildAcc) {
-        this.accessories = buildAcc;
+    public Power getPower() {
+        return power;
+    }
+
+    public void setPower(Power power) {
+        this.power = power;
     }
 }

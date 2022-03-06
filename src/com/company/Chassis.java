@@ -48,7 +48,6 @@ public class Chassis {
 
         return brakeList;
     }
-
     public String getBrakeChoice() {
         return brakeChoice;
     }

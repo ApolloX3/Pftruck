@@ -7,13 +7,14 @@ public class Builder {
 
     Printer printer = new Printer();
 
-    public void buildChassis() {
+    public Chassis buildChassis() {
         // choose wheel base
         Scanner scan = new Scanner(System.in);
         Chassis chassis = new Chassis();
 
         printer.printOptions(chassis.getWheelBaseList());
         int wheelBaseNum = scan.nextInt();
+
         printer.printOptions(chassis.getBrakeList());
         int brakeChoice = scan.nextInt();
 
@@ -23,6 +24,8 @@ public class Builder {
         System.out.println("You chose:");
         System.out.println(chassis.getWheelBaseChoice());
         System.out.println(chassis.getBrakeChoice());
+
+        return chassis;
     }
 
     public ArrayList<String> buildAcc() {
