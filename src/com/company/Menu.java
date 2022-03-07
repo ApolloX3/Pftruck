@@ -15,42 +15,47 @@ public class Menu {
     }
 
     public void chooseOption(int choice) {
-        if (choice == 1) {
-            Chassis chassis = builder.buildChassis();
-            truck.setChassis(chassis);
-            menuPrompt();
-        }
-        if (choice == 2) {
-            ArrayList<String> accessories = builder.buildAccessories();
-            truck.setAccessories(accessories);
-            menuPrompt();
-        }
-        if (choice == 3) {
-            PowerTrain powertrain = builder.buildPowerTrain();
-            truck.setPowerTrain(powertrain);
-            menuPrompt();
-        }
-        if (choice == 4) {
-            Seat seat = builder.buildSeat();
-            truck.setSeat(seat);
-            menuPrompt();
-        }
-        if (choice == 5) {
-            Transmission transmission = builder.buildTransmission();
-            truck.setTransmission(transmission);
-            menuPrompt();
-        }
-        if (choice == 6) {
-            Style style = builder.buildStyle();
-            truck.setStyle(style);
-            menuPrompt();
-        }
-        if (choice == 7) {
-            try {
-                printer.printTruckAttributes(truck);
-            } catch (Exception e) {
+        switch (choice) {
+            case 1:
+                Chassis chassis = builder.buildChassis();
+                truck.setChassis(chassis);
                 menuPrompt();
-            }
+                break;
+            case 2:
+                ArrayList<String> accessories = builder.buildAccessories();
+                truck.setAccessories(accessories);
+                menuPrompt();
+                break;
+            case 3:
+                PowerTrain powertrain = builder.buildPowerTrain();
+                truck.setPowerTrain(powertrain);
+                menuPrompt();
+                break;
+            case 4:
+                Seat seat = builder.buildSeat();
+                truck.setSeat(seat);
+                menuPrompt();
+                break;
+            case 5:
+                Transmission transmission = builder.buildTransmission();
+                truck.setTransmission(transmission);
+                menuPrompt();
+                break;
+            case 6:
+                Style style = builder.buildStyle();
+                truck.setStyle(style);
+                menuPrompt();
+                break;
+            case 7:
+                try {
+                    printer.printTruckAttributes(truck);
+                } catch (Exception e) {
+                    System.out.println("You're not finished filling out all the values in your form, please try again.\n");
+                    menuPrompt();
+                }
+            default:
+                System.out.println("Please enter valid number...");
+                menuPrompt();
         }
     }
 

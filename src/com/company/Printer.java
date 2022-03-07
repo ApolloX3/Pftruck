@@ -26,10 +26,19 @@ public class Printer {
         String text = String.format(
                 "Truck Specifications\n" +
                         "____________________\n" +
-                        "Chassis: \n" +
-                        "Wheelbase: %s\n" +
-                        "Power train: %s\n"
-        );
+                        "Chassis: %s\n",
+                "Wheelbase: %s\n", truck.getChassis().getWheelBaseChoice() +
+                        "Brakes: %s\n", truck.getChassis().getBrakeChoice() +
+                        "_____________________" +
+                        "Power Train: %s\n", truck.getPowerTrain() +
+                        "______________________" +
+                        "Transmission: %s\n", truck.getTransmission() +
+                        "_______________________" +
+                        "Style: %s\n", truck.getStyle() +
+                        "_______________________" +
+                        "Seat: %s\n", truck.getSeat() +
+                        "_______________________" +
+                        "Accessories %s\n", truck.getAccessories());
         System.out.println(text);
     }
 
