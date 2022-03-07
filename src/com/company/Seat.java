@@ -15,7 +15,7 @@ public class Seat {
         ArrayList<String> seatList = new ArrayList<String>();
         seatList.add("Smitty-built Seat");
         seatList.add("Bostrom Seat");
-        seatList.add(" Black Talon Seat");
+        seatList.add("Black Talon Seat");
         seatList.add("Air Ride Seat");
 
         return seatList;
@@ -31,10 +31,6 @@ public class Seat {
 
     public ArrayList<String> getSeatList() {
         return seatList;
-    }
-
-    public void setSeatList(ArrayList<String> seatList) {
-        this.seatList = seatList;
     }
 }
 

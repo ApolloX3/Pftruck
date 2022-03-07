@@ -7,9 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Printer printer = new Printer();
 
-        // TODO: remove title class
-        Title title = new Title("Truck Buying Software", "Let's Build Your Truck!");
-        title.printTitle();
+        printer.printTitle("Truck Buying Software","Let's Build Your Truck!");
 
         Truck truck = new Truck();
         Menu menu = new Menu(truck);

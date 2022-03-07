@@ -30,23 +30,32 @@ public class Menu {
             truck.setPowerTrain(powertrain);
             menuPrompt();
         }
-//        if (choice == 4) {
-//            assembler.assembleSeat();
-//        }
-//        if (choice == 5) {
-//            assembler.assembleTran();
-//        }
-//        if (choice == 6) {
-//            assembler.assembleStyle();
-//        }
+        if (choice == 4) {
+            Seat seat = builder.buildSeat();
+            truck.setSeat(seat);
+            menuPrompt();
+        }
+        if (choice == 5) {
+            Transmission transmission = builder.buildTransmission();
+            truck.setTransmission(transmission);
+            menuPrompt();
+        }
+        if (choice == 6) {
+            Style style = builder.buildStyle();
+            truck.setStyle(style);
+            menuPrompt();
+        }
         if (choice == 7) {
-            truck.printAttributes();
+            try {
+                printer.printTruckAttributes(truck);
+            } catch (Exception e) {
+                menuPrompt();
+            }
         }
     }
 
-    private void menuPrompt() {
+    public void menuPrompt() {
         printer.printMainMenu();
-
         chooseOption(scan.nextInt());
     }
 }

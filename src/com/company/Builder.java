@@ -73,7 +73,7 @@ public class Builder {
         return powertrain;
     }
 
-    public void buildSeat() {
+    public Seat buildSeat() {
         Scanner scan = new Scanner(System.in);
         Seat seat = new Seat();
 
@@ -83,21 +83,25 @@ public class Builder {
         seat.setSeatChoice(seatChoice);
         System.out.println("You Chose:");
         System.out.println(seat.getSeatChoice());
+
+        return seat;
     }
 
-    public void buildTransmission() {
+    public Transmission buildTransmission() {
         Scanner scan = new Scanner(System.in);
-        Transmission tran = new Transmission();
+        Transmission transmission = new Transmission();
 
-        printer.printOptions(tran.getTranList());
+        printer.printOptions(transmission.getTranList());
         int tranChoice = scan.nextInt();
 
-        tran.setTranChoice(tranChoice);
+        transmission.setTranChoice(tranChoice);
         System.out.println("You Chose:");
-        System.out.println(tran.getTranChoice());
+        System.out.println(transmission.getTranChoice());
+
+        return transmission;
     }
 
-    public void buildStyle() {
+    public Style buildStyle() {
         Scanner scan = new Scanner(System.in);
         Style style = new Style();
 
@@ -108,5 +112,7 @@ public class Builder {
 
         System.out.println("You Chose:");
         System.out.println(style.getYourStyleChoice());
+
+        return style;
     }
 }
