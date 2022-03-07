@@ -1,15 +1,20 @@
+/*
+The Truck aggregate class, it takes in the values of the parts of the truck.
+*/
+
 package com.company;
 
 import java.util.ArrayList;
 
 public class Truck {
+    //declare variables, "parts of truck"
     private Chassis chassis;
     private ArrayList<String> accessories;
     private PowerTrain powertrain;
     private Seat seat;
     private Transmission transmission;
     private Style style;
-
+    // get and set the values of the objects that make up the attributes truck object in class truck
     public void setChassis(Chassis chassis1) {
         this.chassis = chassis1;
     }

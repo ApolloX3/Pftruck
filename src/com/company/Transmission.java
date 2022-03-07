@@ -1,3 +1,8 @@
+/*
+Transmission class allows access to create a new transmission
+see style class for annotations of classes objects that are passed into truck
+*/
+
 package com.company;
 
 import java.util.ArrayList;

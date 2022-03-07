@@ -1,3 +1,8 @@
+/*
+The builder class has fields that allow the program to " build out " each part that the user selects
+builder is where most of the function of the program is, when builder is called in the menu class it instantiates
+the objects that will be fed into the Truck object.
+*/
 package com.company;
 
 import java.util.ArrayList;
@@ -7,26 +12,27 @@ public class Builder {
     Scanner scan = new Scanner(System.in);
 
     Printer printer = new Printer();
-
     public Chassis buildChassis() {
+        // build chassis field instantiates a new chassis
         Chassis chassis = new Chassis();
-
+        //printer prints the list of options for wheelbase type user
         printer.printOptions(chassis.getWheelBaseList());
+        //scan for choice
         int wheelBaseNum = scan.nextInt();
-
+        //print list for brake choice
         printer.printOptions(chassis.getBrakeList());
         int brakeChoice = scan.nextInt();
-
+        // sets the choices for wheelbase and brakes using a mutator method on the chassis object
         chassis.setWheelBaseChoice(wheelBaseNum);
         chassis.setBrakeChoice(brakeChoice);
-
+        //prints users choice back to them
         System.out.println("You chose:");
         System.out.println(chassis.getWheelBaseChoice());
         System.out.println(chassis.getBrakeChoice());
-
+        // this method returns the chassis object when finished allowing the object to be passed into other methods
         return chassis;
     }
-
+    //same as chassis
     public ArrayList<String> buildAccessories() {
         Accessories accessories = new Accessories();
         printer.printOptions(accessories.getAccessories());
@@ -35,7 +41,7 @@ public class Builder {
         ArrayList<String> accChoices = new ArrayList<>();
 
         String answerString = "y";
-
+        // here we allow the user to choose multiple options which will be loaded into a list
         while (answerString.equalsIgnoreCase("y")) {
             System.out.println("Enter an Accessory:");
 
@@ -51,9 +57,9 @@ public class Builder {
         }
 
         System.out.println("You chose:");
-
-        for (int i = 0; i < accChoices.size(); ++i) {
-            System.out.println(accChoices.get(i));
+        // we print back the users choice to the console
+        for (String selection : accChoices){
+            System.out.println(selection);
         }
         return accChoices;
     }
@@ -71,7 +77,7 @@ public class Builder {
 
         return powertrain;
     }
-
+    //same as chassis
     public Seat buildSeat() {
         Seat seat = new Seat();
 
@@ -84,7 +90,7 @@ public class Builder {
 
         return seat;
     }
-
+    //same as chassis
     public Transmission buildTransmission() {
         Transmission transmission = new Transmission();
 
@@ -97,7 +103,7 @@ public class Builder {
 
         return transmission;
     }
-
+    //same as chassis
     public Style buildStyle() {
         Style style = new Style();
 

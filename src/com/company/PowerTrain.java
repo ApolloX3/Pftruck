@@ -1,3 +1,8 @@
+/*
+powerTrain class allows access to create a new powertrain
+see style class for annotations of classes objects that are passed into truck
+*/
+
 package com.company;
 
 import java.util.ArrayList;

@@ -1,17 +1,21 @@
+/*
+allows access to the list of styles available to the user
+*/
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Style {
-
+    //declares private fields
     private String yourStyleChoice;
     private ArrayList<String> styleList;
 
     Style() {
+        // constructor sets the arraylist style list to the value of build style list method, maybe didn't need separate method for this...
         styleList = buildStyleList();
     }
 
+    //creates style list
     public ArrayList<String> buildStyleList() {
         ArrayList<String> styleList = new ArrayList<String>();
         styleList.add("Long Flat Nose ");
@@ -32,6 +36,7 @@ public class Style {
         return styleList;
     }
 
+    // Overides to string functionality in java.Lang to print the object to a String
     @Override
     public String toString() {
         return yourStyleChoice;

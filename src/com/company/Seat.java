@@ -1,7 +1,10 @@
 package com.company;
 
 import java.util.ArrayList;
-
+/*
+Seat class allows access to create a new seat
+see style class for annotations of classes objects that are passed into truck
+*/
 public class Seat {
 
     private ArrayList<String> seatList;

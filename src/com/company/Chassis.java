@@ -1,3 +1,9 @@
+/*
+Chassis class allows access to create a new chassis
+see style class for annotations of classes objects that are passed into truck
+only difference here is chassis object takes in two values, wheelbase and brakes
+*/
+
 package com.company;
 
 import java.util.ArrayList;
