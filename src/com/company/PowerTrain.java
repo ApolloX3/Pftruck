@@ -34,4 +34,9 @@ public class PowerTrain {
     public String getEngineChoice() {
         return engineChoice;
     }
+
+    @Override
+    public String toString() {
+        return engineChoice;
+    }
 }

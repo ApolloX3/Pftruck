@@ -53,6 +53,6 @@ public class Chassis {
     }
 
     public void setBrakeChoice(int brakeNum) {
-        brakeChoice = brakeList.get(brakeNum - 1);
+        this.brakeChoice = brakeList.get(brakeNum - 1);
     }
 }

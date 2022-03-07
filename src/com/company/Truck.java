@@ -57,4 +57,5 @@ public class Truck {
     public void setStyle(Style style) {
         this.style = style;
     }
+
 }

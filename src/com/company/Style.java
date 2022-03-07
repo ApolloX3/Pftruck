@@ -11,6 +11,7 @@ public class Style {
     Style() {
         styleList = buildStyleList();
     }
+
     public ArrayList<String> buildStyleList() {
         ArrayList<String> styleList = new ArrayList<String>();
         styleList.add("Long Flat Nose ");
@@ -18,13 +19,21 @@ public class Style {
 
         return styleList;
     }
+
     public String getYourStyleChoice() {
         return yourStyleChoice;
     }
+
     public void setYourStyle(int styleChoice) {
         this.yourStyleChoice = styleList.get(styleChoice - 1);
     }
+
     public ArrayList<String> getStyleList() {
         return styleList;
+    }
+
+    @Override
+    public String toString() {
+        return yourStyleChoice;
     }
 }

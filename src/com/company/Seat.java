@@ -32,5 +32,10 @@ public class Seat {
     public ArrayList<String> getSeatList() {
         return seatList;
     }
+
+    @Override
+    public String toString() {
+        return seatChoice;
+    }
 }
 

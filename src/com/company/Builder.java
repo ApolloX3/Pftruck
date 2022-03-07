@@ -59,7 +59,6 @@ public class Builder {
     }
 
     public PowerTrain buildPowerTrain() {
-        Scanner scan = new Scanner(System.in);
         PowerTrain powertrain = new PowerTrain();
 
         printer.printOptions(powertrain.getEngine());
@@ -74,7 +73,6 @@ public class Builder {
     }
 
     public Seat buildSeat() {
-        Scanner scan = new Scanner(System.in);
         Seat seat = new Seat();
 
         printer.printOptions(seat.getSeatList());
@@ -88,7 +86,6 @@ public class Builder {
     }
 
     public Transmission buildTransmission() {
-        Scanner scan = new Scanner(System.in);
         Transmission transmission = new Transmission();
 
         printer.printOptions(transmission.getTranList());
@@ -102,7 +99,6 @@ public class Builder {
     }
 
     public Style buildStyle() {
-        Scanner scan = new Scanner(System.in);
         Style style = new Style();
 
         printer.printOptions(style.getStyleList());

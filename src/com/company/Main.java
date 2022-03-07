@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
+// TODO: stop menu from running after case: 7 is chosen
     public static void main(String[] args) {
         Printer printer = new Printer();
         printer.printTitle("Truck Buying Software","Let's Build Your Truck!");

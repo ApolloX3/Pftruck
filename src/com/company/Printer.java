@@ -1,5 +1,7 @@
 package com.company;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,23 +25,20 @@ public class Printer {
     }
 
     public void printTruckAttributes(Truck truck) {
-        String text = String.format(
-                "Truck Specifications\n" +
-                        "____________________\n" +
-                        "Chassis: %s\n",
-                "Wheelbase: %s\n", truck.getChassis().getWheelBaseChoice() +
-                        "Brakes: %s\n", truck.getChassis().getBrakeChoice() +
-                        "_____________________" +
-                        "Power Train: %s\n", truck.getPowerTrain() +
-                        "______________________" +
-                        "Transmission: %s\n", truck.getTransmission() +
-                        "_______________________" +
-                        "Style: %s\n", truck.getStyle() +
-                        "_______________________" +
-                        "Seat: %s\n", truck.getSeat() +
-                        "_______________________" +
-                        "Accessories %s\n", truck.getAccessories());
-        System.out.println(text);
+
+        System.out.println("Truck Specifications \n" + "____________________\n" + "Chassis:\n");
+        System.out.println("Wheelbase: \n" + truck.getChassis().getWheelBaseChoice());
+        System.out.println("Brakes:\n" + truck.getChassis().getBrakeChoice());
+        System.out.println( "_____________________");
+        System.out.println( "Power Train:\n" + truck.getPowerTrain());
+        System.out.println("______________________");
+        System.out.println("Transmission: \n" + truck.getTransmission());
+        System.out.println("_______________________");
+        System.out.println("Style: \n" + truck.getStyle() );
+        System.out.println("_______________________");
+        System.out.println("Seat: \n" + truck.getSeat());
+        System.out.println("_______________________");
+        System.out.println("Accessories \n" + truck.getAccessories());
     }
 
     public void printTitle(String title, String tagline) {
